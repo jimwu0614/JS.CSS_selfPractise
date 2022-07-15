@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="card" id="card_1">
+        <div class="contentBox">
+            <div class="content">
+                <h2>voting name<br><span>voting type</span></h2>
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <button class="btn1">Vote Now</button>
+                <button class="btn2">Voting Results</button>
+
+            </div>
+        </div>
+        <div class="toggle" id="toggle_1">
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="card" id="card_2">
+        <div class="contentBox">
+            <div class="content">
+                <h2>voting name<br><span>voting type</span></h2>
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <button class="btn1">Vote Now</button>
+                <button class="btn2">Voting Results</button>
+
+            </div>
+        </div>
+        <div class="toggle" id="toggle_2">
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+        //按下那個拉軸   card的class會變成 "card active"
+        //再按一下  會變回"card"
+        // let card = document.querySelector('.card');      
+        // let cardtoggle = document.querySelector('.toggle'); 
+        // console.log(card);
+        // console.log(cardtoggle);
+        // cardtoggle.onclick = function () {
+            
+        //     card.classList.toggle('active');     
+        // }
+
+        //JQ 等網頁全部跑完  再執行function
+        $(document).ready(function () {
+            //點擊".toggle"時  執行function
+            $(".toggle").click(function() {
+                //抓被點擊的物件的id
+
+                 var tmpID = $(this).attr("id"); 
+                 console.log("tmpID: " + tmpID);      
+                 
+                 //抓"toogle_1"   此字串的第7個字元
+                 var tmpNo = tmpID.substring(7);
+                 console.log("tmpNo: " + tmpNo);
+
+                 var tmpCard = $("#card_" + tmpNo);
+
+
+
+                //判斷 class   若有  就移除"active"    
+                //            若無   就新增"active"
+
+                 if (tmpCard.hasClass("active"))
+                 {
+                    $("#card_" + tmpNo).removeClass("active");
+                 }
+                 else
+                 {
+                    $("#card_" + tmpNo).addClass("active");
+                 }
+                 
+            });
+        });
+    </script>
+</body>
+</html>
