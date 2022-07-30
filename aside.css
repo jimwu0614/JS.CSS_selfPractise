@@ -6,10 +6,13 @@
     padding: 0;
     text-align: center;
 }
-
+aside{
+    width: 70vw;
+    margin: 2rem auto;
+}
 /* 底部白色那一條 */
 .navbar {
-    margin-top: 5rem;
+    margin: 5rem;
     position: relative;
     display: inline-block;
     width: 70px;

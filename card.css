@@ -12,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: #ccc;
 }
 
 /* 未拉開的藍色長方形 "card" */
