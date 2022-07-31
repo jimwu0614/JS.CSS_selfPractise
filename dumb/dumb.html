@@ -99,6 +99,31 @@
             if(random_top >= container.clientHeight / 2)
             no_btn.style.top = `${random_top - no_btn.clientHeight}px`;
 
+
+
+        })
+        no_btn.addEventListener('mouseover', ()=>{
+            no_btn.style.position = 'absolute';
+
+            //新增亂數的隨機位置
+            // clientWidth是取得元素的寬
+            //在這邊使用寬來計算亂數是因為必須把按鈕留在".container"裡面
+            const random_left = Math.floor(Math.random() * container.clientWidth);
+            
+            //下面的方法可行,但偶爾會跑出去".container"外面,所以要加判斷
+            // no_btn.style.left = `${random_left}px`;
+            // console.log (container.clientHeight);
+            
+            if(random_left >= container.clientWidth / 2)
+            no_btn.style.left = `${random_left - no_btn.clientWidth}px`;
+            
+
+            //計算垂直位置
+            const random_top = Math.floor(Math.random() * container.clientHeight);
+
+            if(random_top >= container.clientHeight / 2)
+            no_btn.style.top = `${random_top - no_btn.clientHeight}px`;
+
             console.log('random_top');
             console.log(random_top);
             console.log('random_left');
@@ -108,7 +133,7 @@
 
         yes_btn.addEventListener('click', ()=>{
                 container.innerHTML = `<h2>I Knew It!!!<br></h2>
-                <a href="dumb.html" style="margin-left: 80px;"><button>Back</button></a>`
+                <a href="index.html"><button>Back</button></a>`
 
         })
     </script>
