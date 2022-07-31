@@ -25,7 +25,7 @@ body {
 	margin: 40px 0;
 }
 
-.container .card {
+.card {
 	position: relative;
 	width: 300px;
 	height: 400px;
@@ -39,7 +39,7 @@ body {
 	backdrop-filter: blur(10px);
 }
 
-.container .card .content {
+.card .content {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -48,11 +48,11 @@ body {
 	transition: 0.5s;
 }
 
-.container .card:hover .content {
+.card:hover .content {
 	transform: translateY(-20px);
 }
 
-.container .card .content .imgBx {
+.card .content .imgBx {
 	position: relative;
 	width: 150px;
 	height: 150px;
