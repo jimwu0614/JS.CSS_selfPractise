@@ -34,6 +34,12 @@
             
             square.style.top = Math.random() * innerHeight + "px";
             square.style.left = Math.random() * innerWidth + "px";
+
+            //設定圓角
+            const radius = Math.random() * 15;
+            square.style.borderRadius = radius + 'px';
+
+
                                                     //用陣列長度取亂數 
                         //取完的亂數再用floor取整數       
             const bg = colors[Math.floor(Math.random() * colors.length)] ;

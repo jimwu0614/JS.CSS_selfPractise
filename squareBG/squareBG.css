@@ -18,6 +18,7 @@ section{
     pointer-events: none;
     background: rgb(116, 255, 29);
     animation: animate 5s linear infinite;
+    
 } 
 
 @keyframes animate{
